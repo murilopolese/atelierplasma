@@ -1,4 +1,6 @@
 window.onload = function() {
+  // Main element
+  var main = document.querySelector('main')
   // Wrap letters in spans
   var menuItems = document.querySelectorAll('a')
   for (var i = 0; i < menuItems.length; i++) {
@@ -10,6 +12,7 @@ window.onload = function() {
     }
     item.innerHTML = newContent
   }
+  main.style.opacity = 1
   // Reveal letters
   function revealLetter(n) {
     return function() {
