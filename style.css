@@ -12,7 +12,7 @@ body {
   margin: 0;
   font-size: 1rem;
   font-family: 'Zilla Slab', monospace;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background: #FEF0AA url('background.jpg');
   color: black;
@@ -20,6 +20,8 @@ body {
 }
 
 ul {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -36,6 +38,13 @@ a:visited,
 a:active {
   text-decoration: none;
   color: inherit;
+}
+
+main {
+  height: calc(100vh - 5.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #screen {
@@ -56,11 +65,13 @@ a:active {
 }
 
 #menu {
+  /* height: 50vh; */
   font-size: 2.25rem;
   padding: 2rem 2.5rem 0 2.5rem;
   text-transform: uppercase;
   line-height: 1.5em;
   letter-spacing: 0.1em;
+  justify-content: center;
 }
 
 #contact {
@@ -80,6 +91,36 @@ a:active {
 #logo img {
   height: 5rem;
 }
+
+#books {
+  text-align: center;
+}
+
+#books h1 {
+  font-weight: 300;
+  font-size: 1.75rem;
+  padding: 1rem 0 0 0;
+}
+#books p {
+  font-size: 1.5rem;
+}
+
+ul#books-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+ul#books-list li {
+  width: 20vw;
+  padding: 2rem 3rem;
+}
+
+ul#books-list li img {
+  width: 100%;
+}
+
 
 @keyframes typewriter {
   from {
