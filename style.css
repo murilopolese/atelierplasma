@@ -41,10 +41,17 @@ a:active {
 }
 
 main {
+  position: relative;
   height: calc(100vh - 5.5rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: space-between; */
+}
+
+@media (max-width: 640px) {
+  main {
+    display: block;
+  }
 }
 
 #screen {
@@ -64,8 +71,18 @@ main {
   margin: 0;
 }
 
+#group {
+  height: 70vh;
+}
+
+@media (max-width: 640px) {
+  #group {
+    height: 65%;
+  }
+}
+
+
 #menu {
-  /* height: 50vh; */
   font-size: 2.25rem;
   padding: 2rem 2.5rem 0 2.5rem;
   text-transform: uppercase;
@@ -110,17 +127,23 @@ ul#books-list {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 ul#books-list li {
-  width: 20vw;
+  width: 40vh;
   padding: 2rem 3rem;
+}
+
+@media (max-width: 640px) {
+  ul#books-list li {
+    width: 100%;
+  }
 }
 
 ul#books-list li img {
   width: 100%;
 }
-
 
 @keyframes typewriter {
   from {
